@@ -11,7 +11,7 @@ const ManageService = () => {
     const [loggedUser, setLoggedUser] = useContext(userContext);
 
   useEffect(() => {
-    fetch("http://localhost:3001/isAdmin", {
+    fetch("https://desolate-river-58782.herokuapp.com/isAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedUser.email }),
@@ -26,7 +26,7 @@ const ManageService = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/services")
+      .get("https://desolate-river-58782.herokuapp.com/services")
       .then((response) => {
         setCourses(response.data);
       })
@@ -36,7 +36,7 @@ const ManageService = () => {
   }, []);
 
   const handleDelete =(id)=>{
-    fetch(`http://localhost:3001/services/${id}`,{
+    fetch(`https://desolate-river-58782.herokuapp.com/services/${id}`,{
         method:'DELETE'
     }).then(res=> res.json()) 
 }

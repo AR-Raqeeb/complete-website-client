@@ -9,7 +9,7 @@ const AllAdmissions = () => {
   const [isAdmin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3001/isAdmin", {
+    fetch("https://desolate-river-58782.herokuapp.com/isAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedUser.email }),
@@ -19,7 +19,7 @@ const AllAdmissions = () => {
   }, [loggedUser]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/admissions`)
+    axios.get(`https://desolate-river-58782.herokuapp.com/admissions`)
       .then((response) => {
         setAdmissionList(response.data);
       })
@@ -30,7 +30,7 @@ const AllAdmissions = () => {
 
   const handleStatus = (id, value) => {
     const status = value;
-    fetch(`http://localhost:3001/admissions/${id}`, {
+    fetch(`https://desolate-river-58782.herokuapp.com/admissions/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),

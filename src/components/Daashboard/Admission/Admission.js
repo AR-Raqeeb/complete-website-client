@@ -18,8 +18,8 @@ const Admission = () => {
       status: 'pending',
       trxId: paymentId,
     }
-    
-    fetch('http://localhost:3001/addAdmissions',{
+
+    fetch('https://desolate-river-58782.herokuapp.com/addAdmissions',{
         method: 'POST',
         headers:{'content-type':'application/json'},
         body: JSON.stringify(admissionDetails)

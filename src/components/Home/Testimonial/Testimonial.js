@@ -6,7 +6,7 @@ const Testimonial = () => {
   const [reviews,setReviews]=useState([])
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/reviews')
+    axios.get('https://desolate-river-58782.herokuapp.com/reviews')
   .then(response=> {
     setReviews(response.data);
   })

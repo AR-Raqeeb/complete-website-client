@@ -11,7 +11,7 @@ const MakeAdmin = () => {
         email : data.email
       }
 
-      fetch('http://localhost:3001/addAdmins',{
+      fetch('https://desolate-river-58782.herokuapp.com/addAdmins',{
         method: 'POST',
         headers:{'content-type':'application/json'},
         body: JSON.stringify(admin)

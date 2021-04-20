@@ -10,7 +10,7 @@ const BusinessInfo = () => {
 
   const handleClick = (id) => {
     axios
-      .get(`http://localhost:3001/services/${id}`)
+      .get(`https://desolate-river-58782.herokuapp.com/services/${id}`)
       .then((response) => {
         console.log(response.data);
         setAdmission(response.data);
@@ -22,7 +22,7 @@ const BusinessInfo = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/services")
+      .get("https://desolate-river-58782.herokuapp.com/services")
       .then((response) => {
         setCourses(response.data);
       })

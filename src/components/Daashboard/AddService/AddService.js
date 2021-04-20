@@ -32,7 +32,7 @@ const AddService = () => {
       price: data.price,
     }
     
-    fetch('http://localhost:3001/addServices', {
+    fetch('https://desolate-river-58782.herokuapp.com/addServices', {
       method: 'POST',
       headers:{'content-type':'application/json'},
       body: JSON.stringify(service)

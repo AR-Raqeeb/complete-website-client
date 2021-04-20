@@ -9,7 +9,7 @@ const AdmissionList = () => {
   const [isAdmin, setAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3001/isAdmin", {
+    fetch("https://desolate-river-58782.herokuapp.com/isAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: loggedUser.email }),
@@ -20,7 +20,7 @@ const AdmissionList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/admission?userEmail=${loggedUser.email}`)
+      .get(`https://desolate-river-58782.herokuapp.com/admission?userEmail=${loggedUser.email}`)
       .then((response) => {
         setAdmissionList(response.data);
       })

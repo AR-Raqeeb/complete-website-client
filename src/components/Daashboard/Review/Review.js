@@ -15,7 +15,7 @@ const Review = () => {
       img: loggedUser.photoURL,
     };
 
-    fetch("http://localhost:3001/addReviews", {
+    fetch("https://desolate-river-58782.herokuapp.com/addReviews", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(review),
